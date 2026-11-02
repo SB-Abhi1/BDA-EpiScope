@@ -1,0 +1,19 @@
+services:
+  pipeline:
+    build: .
+    environment:
+      SPARK_LOCAL_IP: 127.0.0.1
+      SPARK_DRIVER_MEMORY: 3g
+    volumes:
+      - ./data:/app/data
+      - ./dashboard:/app/dashboard
+      - ./docs:/app/docs
+    command: python scripts/run_all.py --sf ${SF:-1}
+  dashboard:
+    image: python:3.12.8-slim-bookworm
+    working_dir: /dashboard
+    volumes:
+      - ./dashboard:/dashboard:ro
+    ports:
+      - "127.0.0.1:8000:8000"
+    command: python -m http.server 8000 --bind 0.0.0.0
