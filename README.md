@@ -9,6 +9,7 @@ District surveillance, forecasting and response planning for Bangladesh using Ap
 | Manik Dey | 0222220005101096 | Dashboard and presentation |
 
 **Repository:** https://github.com/SB-Abhi1/BDA-EpiScope
+
 **Presentation:** https://drive.google.com/file/d/1imK_dGQrPre40pLm3VUMRmqRg-ZkajXz/view?usp=drive_link
 
 Health encounters, facilities and stock feeds are synthetic. Public boundaries, weather and population inputs retain their documented provenance. Results support an educational prototype and do not establish operational surveillance accuracy.
